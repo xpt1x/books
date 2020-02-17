@@ -103,15 +103,18 @@ def search():
         #else display all 9 books
         return render_template('books.html', books=books)
 
-@app.route('/book/<string:isbn>', methods=['GET', 'POST'])
+@app.route('/book/<isbn>', methods=['GET', 'POST'])
 def book(isbn):
     # if send to this route normally
     # query about book details from db
     book = Book.query.get(isbn)
     res = requests.get("https://www.goodreads.com/book/review_counts.json", params={"key": api_key, "isbns": isbn})
-            
-    gr_ratings = res.json()
-    gr_ratings = gr_ratings['books'][0]
+
+    if res.status_code != 200:
+        return render_template('index.html', errmsg='GoodReads Data not found')
+    else :    
+        gr_ratings = res.json()
+        gr_ratings = gr_ratings['books'][0]
 
     if request.method == 'GET':
         
