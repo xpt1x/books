@@ -1,6 +1,6 @@
 # Project 1
 
-Web Programming with Python and JavaScript
+### Web Programming with Python and JavaScript
 
 This project is a web application which provides ability to users to leave their reviews about book(s), selected from database and can see reviews made by other people. This web app uses a third-party API provided by GoodReads ( another book review website ) to fetch their ratings and review data also. This project also provide a API to query for reviews and info about a particular book via its api route.
 
