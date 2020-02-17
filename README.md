@@ -14,6 +14,8 @@ This project provides a web application which provides ability to users to leave
 
 ## INSTALL 
 
+Python3 is required
+
 ```bash
 # setup environment variables
 $ export FLASK_APP=application.py
