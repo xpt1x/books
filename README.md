@@ -35,7 +35,7 @@ $ python import.py
 $ flask run
 ```
 
-> Note: Mysqlclient is required: [Install MysqlClient](https://github.com/PyMySQL/mysqlclient-python)
+> Note: Mysqlclient is required: [Install MysqlClient](https://github.com/PyMySQL/mysqlclient-python) if you want to use MYSQL as your db
 
 > Get your DATABASE_URL from your DATABASE Credentials 
 
