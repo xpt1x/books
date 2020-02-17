@@ -22,6 +22,9 @@ $ export FLASK_APP=application.py
 $ export DATABASE_URL=''
 $ export GOODREADS_API_KEY=''
 
+# this is unique identifier for your app
+$ export SECRET_KEY=''
+
 # clone this repo with git
 $ git clone https://github.com/xpt1x/Project1.git
 $ cd Project1

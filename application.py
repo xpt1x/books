@@ -9,18 +9,21 @@ from models import *
 
 app = Flask(__name__)
 
-# Check for environment variable and API KEY
+# Check for environment variable, API KEY, SECRET KEY
 if not os.getenv("DATABASE_URL"):
     raise RuntimeError("DATABASE_URL is not set")
 
 if not os.getenv("GOODREADS_API_KEY"):
     raise RuntimeError("GOODREADS_API_KEY is not set")
 
+if not os.getenv("SECRET_KEY"):
+    raise RuntimeError("SECRET_KEY is not set")
+
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
+app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
 api_key = os.getenv("GOODREADS_API_KEY")
 
 # Configure session to use filesystem
-app.config['SECRET_KEY'] = 'xpt1x-books-app'
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
