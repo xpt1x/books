@@ -1,8 +1,13 @@
 # Project 1
 
-Web Programming with Python and JavaScript
+### Web Programming with Python and JavaScript
 
-This project provides a web application which provides ability to users to leave review about a particular book, selected from database and can see reviews made by other people. This uses a third-party API provided by GoodReads ( another book review website ). This project also provide a API to query for reviews and info about a particular book via its api route.
+This project is a web application which provides ability to users to leave their reviews about book(s), selected from database and can see reviews made by other people. This web app uses a third-party API provided by GoodReads ( another book review website ) to fetch their ratings and review data also. This project also provide a API to query for reviews and info about a particular book via its api route.
+
+### TEST RUN
+
+https://books-xpt1x.herokuapp.com/ 
+> Powered by Heroku
 
 ## USAGE
 
@@ -10,7 +15,8 @@ This project provides a web application which provides ability to users to leave
 - Search for a book via ISBN / Title / Author
 - Get details about book and ratings from GoodReads
 - Provide a rating and submit a review
-- Fetch details about a ISBN using **API ROUTE** ( /api/'isbn' ) Ex: http://127.0.0.1:5000/api/031606792X
+- Fetch details about a ISBN using **API ROUTE** ( /api/' isbn ' ) 
+> Ex: http://your-site/api/031606792X
 
 ## INSTALL 
 
@@ -30,7 +36,7 @@ $ git clone https://github.com/xpt1x/Project1.git
 $ cd Project1
 $ pip install -r requirements.txt
 
-# now create tables and import data
+# now create tables and import data from csv
 $ python create.py
 $ python import.py
 
