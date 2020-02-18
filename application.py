@@ -158,6 +158,7 @@ def api(isbn):
         for each_rating in user_ratings:
             avg += each_rating.rating
             count += 1
-        avg = avg/count
+        if count != 0:
+            avg = avg/count
         res = {'title': book.title, 'author': book.author, 'year': book.year, 'isbn': book.isbn, 'review_count': count, 'average_score': avg}
         return jsonify(res)
